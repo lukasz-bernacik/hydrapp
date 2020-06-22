@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
 @import "~normalize.css";
 
@@ -7,8 +7,10 @@
 body {
   background: $background;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
@@ -18,7 +20,12 @@ body {
 }
 
 .glass {
+  width: 280px;
+  height: 280px;
+  background: url(../assets/img/water-glass.svg);
+  background-size: contain;
   display: flex;
+  align-items: center;
   justify-content: center;
   position: relative;
   margin-bottom: 48px;
@@ -38,24 +45,25 @@ body {
     margin-top: 87px;
     margin-bottom: 68px;
   }
-  &__button {
-    &--add {
-      width: 216px;
-      height: 47px;
-      font-size: 18px;
-      font-weight: 500;
-      border: none;
-      border-radius: 4px;
-      margin-bottom: 37px;
-    }
-    &--remove {
-      width: 184px;
-      height: 23px;
-      background: $background;
-      color: #F5E5E7;
-      border: none;
-    }
-  }
 }
 
-
+.button-add {
+  display: block;
+  margin: 0 auto;
+  width: 216px;
+  height: 47px;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.button-remove {
+  display: block;
+  margin: 0 auto;
+  width: 216px;
+  height: 47px;
+  background: $background;
+  color: #f5e5e7;
+  border: none;
+}

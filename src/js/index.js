@@ -6,4 +6,37 @@ registerSW();
 
 /* place your code below */
 
-console.log('HELLO 🚀')
+const glassNumber = document.querySelector('.glass__number--js');
+const buttonAdd = document.querySelector('.button-add--js');
+const buttonRemove = document.querySelector('.button-remove--js');
+const key = new Date().toLocaleString().slice(0, 10);
+
+let currentGlassNumber = 0;
+
+const localStorageValue = localStorage.getItem(key);
+
+if (localStorageValue) {
+    currentGlassNumber = localStorageValue;
+}else {
+    localStorage.setItem(key, 0);
+}
+
+buttonAdd.addEventListener('click', () => {
+    currentGlassNumber++;
+    glassNumber.innerHTML = currentGlassNumber;
+    localStorage.setItem(key, currentGlassNumber);
+});
+
+buttonRemove.addEventListener('click', () => {
+    if (currentGlassNumber > 0) {
+        currentGlassNumber--;
+    }
+    glassNumber.innerHTML = currentGlassNumber;
+    localStorage.setItem(key, currentGlassNumber);
+});
+
+
+
+
+
+
