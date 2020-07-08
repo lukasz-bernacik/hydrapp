@@ -17,6 +17,7 @@ const localStorageValue = localStorage.getItem(key);
 
 if (localStorageValue) {
     currentGlassNumber = localStorageValue;
+    glassNumber.innerHTML = currentGlassNumber;
 }else {
     localStorage.setItem(key, 0);
 }
